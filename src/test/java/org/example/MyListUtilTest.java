@@ -2,6 +2,9 @@ package org.example;
 
 
 
+import kantan.codecs.strings.joda.time.JodaTimeInstances;
+import org.joda.time.DateTime;
+import org.joda.time.JodaTimePermission;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -19,7 +22,8 @@ public class MyListUtilTest {
     }
     @Before
     public void Inizio(){
-        System.out.println("data e ora inizio");
+
+        System.out.println(DateTime.now());
     }
 
     @Test
