@@ -1,10 +1,7 @@
 package org.example;
 
 
-
-import kantan.codecs.strings.joda.time.JodaTimeInstances;
 import org.joda.time.DateTime;
-import org.joda.time.JodaTimePermission;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -15,21 +12,22 @@ import java.util.Arrays;
 import  static  org.junit.Assert.*;
 
 public class MyListUtilTest {
+
     private static MyListUtil m;
+
     @BeforeClass
     public static void preparazioneTest(){
         m = new MyListUtil();
     }
+
     @Before
     public void Inizio(){
-
         System.out.println(DateTime.now());
     }
 
     @Test
     public void ordineCrescenteWorks(){
         ArrayList<Integer> test1 = new ArrayList<Integer>();
-
         test1.addAll(Arrays.asList(6,5,1,4,2,3));
         assertEquals(Arrays.asList(1,2,3,4,5,6),m.ordineCrescente(test1));
         assertNotEquals(Arrays.asList(3,6,0,4,2,1),m.ordineCrescente(test1));
